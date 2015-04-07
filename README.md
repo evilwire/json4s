@@ -105,19 +105,23 @@ For the Jackson support add the following dependency to your project description
 
 For the native support add the following dependency to your pom:
 
-    <dependency>
-      <groupId>org.json4s</groupId>
-      <artifactId>json4s-native_${scala.version}</artifactId>
-      <version>3.2.11</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>org.json4s</groupId>
+  <artifactId>json4s-native_${scala.version}</artifactId>
+  <version>3.2.11</version>
+</dependency>
+```
 
 For the jackson support add the following dependency to your pom:
 
-    <dependency>
-      <groupId>org.json4s</groupId>
-      <artifactId>json4s-jackson_${scala.version}</artifactId>
-      <version>3.2.11</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>org.json4s</groupId>
+  <artifactId>json4s-jackson_${scala.version}</artifactId>
+  <version>3.2.11</version>
+</dependency>
+```
 
 ### Others
 
@@ -241,11 +245,11 @@ DSL rules
 * Primitive types map to JSON primitives.
 * Any seq produces JSON array.
 
-      scala> val json = List(1, 2, 3)
-
-      scala> compact(render(json))
-
-      res0: String = [1,2,3]
+```scala
+  scala> val json = List(1, 2, 3)
+  scala> compact(render(json))
+  res0: String = [1,2,3]
+```
 
 * Tuple2[String, A] produces field.
 
